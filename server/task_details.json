@@ -1,0 +1,27 @@
+
+   {
+    "id" : "",
+    "notes": "",
+    "detailed_notes":"",
+    "subtasks":[],
+    "task_predecessor_id": "",
+    "task_successor_id" : "",
+    "display_task_until_completion":"",
+    "number_of_chunks_of_the_task":"", 
+    "percentage_done": 0,
+    "completed_partially": false,
+    "estimatedDurationToComplete":{
+        "unit_of_time":"",
+        "time_for_the_unit":""
+    },
+    "show_deadline_approaching": true,
+    "number_of_check_points": 0,
+    "canBePostponedFlag": true,
+    "recurring_task_auto_postpone": true,
+    "time_ranges_of_the_day_each_chunk_can_be_started" : [ ],
+   
+    "continue_showing_until_done_without_delay": true,
+    "timeFrameRangeList": [],
+    "event": false,
+    "skippedCount":""
+}

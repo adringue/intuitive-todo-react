@@ -1,0 +1,34 @@
+.react-calendar-timeline .rct-item.item-weekend {
+  background-color: #21F32C;
+  border-color: #29B31A;
+}
+.adj-task-create{
+  display: block;
+  margin: auto;
+}
+.react-calendar-timeline{
+  margin-top: 30px;
+}
+.aside-icons{
+  height: 100%;
+  border: 1px solid black;
+  margin-top: 30px;
+  padding-top: 25rem;
+
+}
+.adj-icon-asi{
+  text-align: center;
+  font-size: 36px;
+  margin-top: 20px;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  //z-index: 2000;
+  z-index:0;
+}
+.rct-outer{
+  .rct-scroll{
+    z-index:0 !important;
+  }
+}

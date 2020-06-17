@@ -1,0 +1,69 @@
+
+
+let id = 0;
+
+//task and task_detail json fields
+
+let name = null ;
+let notes = null ;
+let detailed_notes = null;
+let subtasks[ ] = [ ] ;  
+let task_predecessor_id = null;
+let task_successor_id = null;
+Let due_date = today ;
+let leaf_task = true //if there are no subtasks/successor then it is leaf task
+Let is_it_chunk_of_task = false // default is false. 
+//‘Read today for exam is a chunk of task ‘study for exam’
+// chunk is also a task.  ‘Study for exam’ is also a task.
+
+display_task_until_completion = true // default true 
+number_of_chunks_of_the_task = 1 ; 
+                // say you want to build a fence or study for an exam.
+   				// you want to do it in 14 days 30 mins each every 2 days. 
+				//default is one.
+				//Due date of chunks will be the same day by default.
+Boolean must_do = true; //show a red indicator  that it must be done.
+let priory = 1 ; //1 -1000  . internal priority 
+    // When priority clashes then order of sort is the duration of task in ascending.
+    // default is 1. We don’t display priority directly.setting
+Let complete = true | false 
+Let percentage_done = 0 (0 - 100)  // 0 is default
+Let completed_partially =  false // value depends on percentage done.
+
+	
+const  estimatedDurationToComplete =
+   {
+	unit_of_time : minutes //default minutes (otherwise hours, days)
+            time_for_the_unit: 15 //. Default it to 15 mins
+	
+    }; //this is just an estimate. Chunks (number_of_chunks_of_the_task) 
+       // of the task will depend on this.
+
+show_deadline_approaching = 
+  //show this when the time to complete is almost over 
+                                                    //like say:    25/100  75/100 
+number_of_check_points = 0//default 0  per day . User can pick in calendar
+				     	//this will be based on the 'time ranges' selected in calendar
+
+Boolean  canBePostponedFlag = false;   
+              // rule: false for on time task, default is false
+Boolean recurring_task_auto_postpone = true // default is true e.g: gym. If you
+					 // want it false then mark the task as must do.
+Boolean recurring = false; // is it a recurring task ? Default is false.
+
+
+Time_ranges_of_the_day_each_chunk_can_be_started = [ ]; 
+Time_ranges_of_the_day_each_task_can_be_started = [ ]; 
+
+Date reminderDateTime  = null; //this is for on time tasks only
+continue_showing_until_done_without_delay = true //default is true 
+	// also consider the time range for the continous showing of task 
+// e.g: take appointment before 7 PM . After 7PM salon store closes so no need 
+// of showing the task anymore
+List<Time range> timeFrameRangeList; //eg: home remodeling takes 2 months.
+	//another example is - study for exam
+
+ 	Boolean event = false;  // if event this should show in Calendar as well.
+            int skippedCount = “”  ; //  if a recurring task is skipped then keep track of it.
+soft_deadlines = deadline of task 
+// soft_deadlines can same as checkpoints

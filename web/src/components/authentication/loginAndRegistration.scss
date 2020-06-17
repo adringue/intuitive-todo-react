@@ -1,0 +1,27 @@
+.v-header{
+  height: 100vh;
+  color:white;
+}
+.fullscreen-video-wrap{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fullscreen-video-wrap video{
+  min-width:100% ;
+  min-height:100%;
+}
+.header-overlay{
+height:100vh;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  background: #225479;
+  z-index: 1;
+  opacity:0.85;
+}

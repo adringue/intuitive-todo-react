@@ -1,0 +1,63 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+
+const App = () => {
+
+
+    const [data, setData] = useState({ hits: [] });
+
+    useEffect(() => {
+    
+            const d = async function fetchReduxInfo() {
+                const result = await axios('https://hn.algolia.com/api/v1/search?query=redux');
+                return result;
+            }
+        d().then((r) => { 
+            setData(r);
+        console.log(r); 
+        });
+    }
+  , []);
+
+
+
+const [hasUserLoginError, setUserLoginErrors] = useState(true);
+const [user, setUser] = useState({});
+
+useEffect(() => {
+    async function fetchData(err, resp) {
+        //   const result = await axios.get(
+        //     'http://localhost:8080/user'
+        //   );
+        //throw err;
+        setUser("raj");
+        //setUser(result.data);
+        setUserLoginErrors(false);
+       // console.log(JSON.stringify(result.data));
+    }
+    fetchData().catch(err => {
+        setUserLoginErrors(true);
+    });
+}, []);
+
+
+return (
+    <div>
+        <div>
+            <h6>Hi !!! {user.name ? (<p> {user.name} </p>) : (<p></p>)}</h6>
+            {hasUserLoginError ? (<p> Please login with correct username and password</p>) : (<p> logged in</p>)}
+
+            {/* <ul>
+        {data.hits.map(item => (
+          <li key={item.objectID}>
+            <a href={item.url}>{item.title}</a>
+          </li>
+        ))}
+      </ul> */}
+        </div>
+    </div>
+);
+}
+
+export default App

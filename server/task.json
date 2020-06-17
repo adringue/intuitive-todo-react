@@ -1,0 +1,13 @@
+{
+    "id" : "",
+    "name" : "",
+    "leaf_task":"",
+    "due_date":"",
+    "complete": "",
+    "must_do": true,
+    "recurring": false,
+    "soft_deadlines":[],
+    "hard_deadline":"",
+    "priory": 1,
+    "reminderDateTime":""
+}
